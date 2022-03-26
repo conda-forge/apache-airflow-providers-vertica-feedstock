@@ -1,5 +1,5 @@
 {% set name = "apache-airflow-providers-vertica" %}
-{% set version = "2.1.1" %}
+{% set version = "2.1.3" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/apache-airflow-providers-vertica-{{ version }}.tar.gz
-  sha256: 822690243ca5f6cce9585b89e021c5a2a2922ae1ce44e4aef6e991fcfed56927
+  sha256: ac56fbbbb887ead97d4bf0fae9b4c1b199fb75098ddd902626c601437a5f97bb
 
 build:
   number: 0
