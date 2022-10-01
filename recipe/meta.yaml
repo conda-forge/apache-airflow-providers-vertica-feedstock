@@ -1,5 +1,5 @@
 {% set name = "apache-airflow-providers-vertica" %}
-{% set version = "3.2.0" %}
+{% set version = "3.2.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/apache-airflow-providers-vertica-{{ version }}.tar.gz
-  sha256: 2a6665ce05a37e40198a242d186653eb6643c34fed5e4f74acfbd65af162121d
+  sha256: 8be008049d701550a208c5a8482f18ee73c3f370be9a2ec11a5e26374922607f
 
 build:
   noarch: python
@@ -17,12 +17,12 @@ build:
 requirements:
   host:
     - python >=3.7
-    - pip
     - setuptools
+    - pip
   run:
     - python >=3.7
+    - apache-airflow-providers-common-sql >=1.2.0
     - apache-airflow >=2.2.0
-    - apache-airflow-providers-common-sql
     - vertica-python >=0.5.1
 
 test:
