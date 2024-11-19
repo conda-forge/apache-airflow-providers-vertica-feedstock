@@ -6,7 +6,7 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/apache_airflow_providers_vertica-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/apache_airflow_providers_vertica-{{ version }}.tar.gz
   sha256: 563abe7527f00b2eb4930007ab050f0f594a75b5b4538c81261729e3153fa787
 
 build:
@@ -16,11 +16,11 @@ build:
 
 requirements:
   host:
-    - python >=3.8,<4.dev0
-    - flit-core >=3.2,<4
+    - python {{ python_min }}
+    - flit-core ==3.10.1
     - pip
   run:
-    - python >=3.8
+    - python >={{ python_min }}
     - apache-airflow-providers-common-sql >=1.20.0
     - apache-airflow >=2.8.0
     - vertica-python >=0.6.0
@@ -31,6 +31,7 @@ test:
   commands:
     - pip check
   requires:
+    - python {{ python_min }}
     - pip
 
 about:
