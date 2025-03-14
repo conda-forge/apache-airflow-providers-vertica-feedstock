@@ -17,12 +17,12 @@ build:
 requirements:
   host:
     - python {{ python_min }}
-    - flit-core ==3.10.1
+    - flit-core ==3.11.0
     - pip
   run:
     - python >={{ python_min }}
-    - apache-airflow-providers-common-sql >=1.20.0
     - apache-airflow >=2.9.0
+    - apache-airflow-providers-common-sql >=1.20.0
     - vertica-python >=0.6.0
 
 test:
@@ -38,7 +38,7 @@ about:
   home: https://github.com/apache/airflow/
   summary: Provider package apache-airflow-providers-vertica for Apache Airflow
   license: Apache-2.0
-  license_file: airflow/providers/vertica/LICENSE
+  license_file: src/airflow/providers/vertica/LICENSE
   license_family: Apache
   doc_url: https://airflow.apache.org/docs/apache-airflow-providers-vertica/stable/index.html
   dev_url: https://github.com/apache/airflow/
