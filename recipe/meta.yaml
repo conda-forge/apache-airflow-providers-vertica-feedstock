@@ -1,5 +1,6 @@
 {% set name = "apache-airflow-providers-vertica" %}
 {% set version = "4.1.1" %}
+{% set python_min = "3.10" %}
 
 package:
   name: {{ name|lower }}
