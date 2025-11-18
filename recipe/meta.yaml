@@ -1,6 +1,5 @@
 {% set name = "apache-airflow-providers-vertica" %}
-{% set version = "4.1.3" %}
-{% set python_min = "3.10" %}
+{% set version = "4.1.4" %}
 
 package:
   name: {{ name|lower }}
@@ -8,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/apache_airflow_providers_vertica-{{ version }}.tar.gz
-  sha256: 5b6d4d7e83cf24282bb691f9becc16790aa4910c00c0650bf43433e2149e2f00
+  sha256: d85f45453266e73e73f8f2ceb2e787d1c6d3cd1091bb5c8515c4224e894863b1
 
 build:
   noarch: python
@@ -39,7 +38,9 @@ about:
   home: https://github.com/apache/airflow/
   summary: Provider package apache-airflow-providers-vertica for Apache Airflow
   license: Apache-2.0
-  license_file: src/airflow/providers/vertica/LICENSE
+  license_file:
+    - LICENSE
+    - NOTICE
   license_family: Apache
   doc_url: https://airflow.apache.org/docs/apache-airflow-providers-vertica/stable/index.html
   dev_url: https://github.com/apache/airflow/
