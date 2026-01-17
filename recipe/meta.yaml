@@ -1,5 +1,5 @@
 {% set name = "apache-airflow-providers-vertica" %}
-{% set version = "4.2.0" %}
+{% set version = "4.2.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/apache_airflow_providers_vertica-{{ version }}.tar.gz
-  sha256: d7399b7ef8cc3aa8365732859e740f698751431c69f97a4e911d5b4727dd502f
+  sha256: b0f01cbc6f3ebf2acb7769b78e960fa467808055ba1d41d9970f7c3b5f48bff6
 
 build:
   noarch: python
@@ -20,6 +20,7 @@ requirements:
     - flit-core ==3.12.0
     - pip
   run:
+    - apache-airflow-providers-common-compat >=1.12.0
     - python >={{ python_min }}
     - apache-airflow >=2.11.0
     - apache-airflow-providers-common-sql >=1.26.0
