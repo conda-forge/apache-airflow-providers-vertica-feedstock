@@ -1,6 +1,6 @@
 context:
   name: apache-airflow-providers-vertica
-  version: "4.4.0"
+  version: "4.4.1"
 
 package:
   name: ${{ name|lower }}
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/apache_airflow_providers_vertica-${{ version }}.tar.gz
-  sha256: 530d24fe3a5d79afd8f1ca9af96e188c5fe52f564acbbb0d3392fae4a7de21f0
+  sha256: 416cd9ce20f01b0145b7168121d832e8dd710641da8e6f022dbdc19aa65e9eb7
 
 build:
   noarch: python
@@ -19,7 +19,7 @@ requirements:
   host:
     - python ${{ python_min }}.*
     - pip
-    - flit-core ==3.12.0
+    - flit-core ==4.1.0
   run:
     - python >=${{ python_min }}
     - apache-airflow >=2.11.0
